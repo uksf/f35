@@ -15,17 +15,3 @@ Thumbs.db
 *.pdb
 *.tlog
 */.vs
-extensions/.vs
-extensions/Release
-extensions/build32
-extensions/build64
-extensions/x86
-extensions/x64
-extensions/packages
-extensions/src/modules/data/secret.hpp
-tools/service.py
-tools/manage.py
-
-!@intercept/**
-
-intercept/uksf*.dll

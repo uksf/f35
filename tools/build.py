@@ -6,7 +6,7 @@ import subprocess
 
 ######## GLOBALS #########
 MAINPREFIX = "u"
-PREFIX = "f35_"
+PREFIX = "uksf_f35_"
 ##########################
 
 def mod_time(path):

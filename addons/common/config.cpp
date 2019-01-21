@@ -7,7 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "uksf_main"
+            "uksf_f35_main"
         };
         author = QUOTE(UKSF);
         authors[] = { "Beswick.T" };

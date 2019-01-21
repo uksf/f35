@@ -1,1 +1,1 @@
-#include "\u\f35\addons\common\script_component.hpp"
+#include "\u\uksf_f35\addons\common\script_component.hpp"

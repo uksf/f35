@@ -34,7 +34,7 @@ class CfgPatches {
 class CfgMods {
     class Mod_Base;
     class PREFIX: Mod_Base {
-        dir = "@f35";
+        dir = "@uksf_f35";
         name = "UKSF F35";
         author = "F35";
         picture = QPATHTO_R(data\uksf_logo_ca);

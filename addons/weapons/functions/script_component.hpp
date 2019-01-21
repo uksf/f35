@@ -1,1 +1,1 @@
-#include "\u\f35\addons\weapons\script_component.hpp"
+#include "\u\uksf_f35\addons\weapons\script_component.hpp"

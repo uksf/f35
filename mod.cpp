@@ -1,0 +1,12 @@
+name = "UKSF F35";
+picture = "modLarge.paa";
+actionName = "GitHub";
+action = "https://github.com/uksf/modpack";
+description = "UKSF - F35";
+logo = "mod.paa";
+logoOver = "mod.paa";
+tooltip = "UKSF F35";
+tooltipOwned = "UKSF F35";
+overview = "UKSF F35";
+author = "UKSF SR11 Team";
+overviewPicture = "modLarge.paa";

@@ -57,7 +57,7 @@ if sys.platform == "win32":
     import winreg
 
 ######## GLOBALS #########
-project = "@f35"
+project = "@uksf_f35"
 project_version = "0.0.1"
 arma3tools_path = ""
 work_drive = ""
@@ -65,11 +65,11 @@ module_root = ""
 make_root = ""
 release_dir = ""
 module_root_parent = ""
-key_name = "f35"
+key_name = "uksf_f35"
 key = ""
 dssignfile = ""
-prefix = "f35"
-pbo_name_prefix = "f35_"
+prefix = "uksf_f35"
+pbo_name_prefix = "uksf_f35_"
 signature_blacklist = []
 importantFiles = ["mod.cpp", "README.md", "mod.paa", "modLarge.paa", "AUTHORS.txt", "LICENSE"]
 versionFiles = ["mod.cpp", "README.md"]

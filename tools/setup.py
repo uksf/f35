@@ -13,7 +13,7 @@ import winreg
 
 ######## GLOBALS #########
 MAINDIR = "u"
-PROJECTDIR = "f35"
+PROJECTDIR = "uksf_f35"
 CBA = "P:\\x\\cba"
 ##########################
 

@@ -7,11 +7,13 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "uksf_common"
+            "uksf_f35_common"
         };
         author = QUOTE(UKSF);
         authors[] = { "Beswick.T" };
         url = QUOTE(www.uk-sf.com);
-        VERSION_CONFIG_COMMON;
+        VERSION_CONFIG;
     };
 };
+
+#include "CfgWeapons.hpp"

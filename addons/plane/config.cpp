@@ -3,15 +3,19 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {};
+        units[] = {
+            QGVAR(f35)
+        };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "uksf_common"
+            "uksf_f35_weapons"
         };
         author = QUOTE(UKSF);
         authors[] = { "Beswick.T" };
         url = QUOTE(www.uk-sf.com);
-        VERSION_CONFIG_COMMON;
+        VERSION_CONFIG;
     };
 };
+
+#include "CfgVehicles.hpp"

@@ -8,7 +8,7 @@ PixelShaderID="Super";
 VertexShaderID="Super";
 class Stage1
 {
-	texture="u\f35\addons\plane\data\exterior_station_nohq.paa";
+	texture="u\uksf_f35\addons\weapons\data\exterior_station_nohq.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -37,7 +37,7 @@ class Stage3
 };
 class Stage4
 {
-	texture="u\f35\addons\plane\data\exterior_station_as.paa";
+	texture="u\uksf_f35\addons\weapons\data\exterior_station_as.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -49,7 +49,7 @@ class Stage4
 };
 class Stage5
 {
-	texture="u\f35\addons\plane\data\exterior_station_smdi.paa";
+	texture="u\uksf_f35\addons\weapons\data\exterior_station_smdi.paa";
 	uvSource="tex";
 	class uvTransform
 	{

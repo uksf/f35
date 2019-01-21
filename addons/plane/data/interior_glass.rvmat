@@ -1,6 +1,6 @@
 class StageTI
 {
-	texture="u\f35\addons\plane\data\glass_ca.paa";
+	texture="u\uksf_f35\addons\plane\data\glass_ca.paa";
 };
 surfaceInfo="A3\data_f\penetration\glass.bisurf";
 ambient[]={0.73100048,0.73100048,0.73100048,1};

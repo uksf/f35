@@ -4,7 +4,8 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
-            QGVAR(f35)
+            QGVAR(raf),
+            QGVAR(usmc)
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -18,4 +19,7 @@ class CfgPatches {
     };
 };
 
+#include "CfgCloudlets.hpp"
+#include "CfgMoves.hpp"
+#include "CfgSoundSets.hpp"
 #include "CfgVehicles.hpp"

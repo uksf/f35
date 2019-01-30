@@ -16,8 +16,10 @@
 params ["_plane"];
 
 if (isServer) then {
-    [_plane] call FUNC(setMfdLoadout);
+    [_plane] call FUNC(setMfdLoadout);    
+};
 
+if (hasInterface || isServer) then {
     [{
         params ["_args", "_idPFH"];
         _args params ["_plane"];
@@ -26,18 +28,18 @@ if (isServer) then {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
 
-        private _newThrustVector = _plane animationPhase "source_thrustVector";
-        private _newSpeedBrake = _plane animationPhase "source_speedBrake";
+        if (local _plane) then {
+            private _newThrustVector = _plane animationPhase "source_thrustVector";
+            private _newSpeedBrake = _plane animationPhase "source_speedBrake";
 
-        // Thrustvector animations
-        [_plane, _newThrustVector, _newSpeedBrake] call FUNC(animateThrustVector);
+            // Thrustvector animations
+            [_plane, _newThrustVector, _newSpeedBrake] call FUNC(animateThrustVector);
 
-        // Speedbrake animations
-        [_plane, _newSpeedBrake] call FUNC(animateSpeedBreak);
+            // Speedbrake animations
+            [_plane, _newSpeedBrake] call FUNC(animateSpeedBreak);
+        };
     }, 0, [_plane]] call CBA_fnc_addPerFrameHandler;
-};
 
-if (hasInterface || isServer) then {
     [{
         params ["_args", "_idPFH"];
         _args params ["_plane"];

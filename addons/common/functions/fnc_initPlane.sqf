@@ -13,16 +13,22 @@
 */
 #include "script_component.hpp"
 
+#define AFTERBURNER_DELAY 0.03
+
 params ["_plane"];
 
 if (isServer) then {
-    [_plane] call FUNC(setMfdLoadout);    
+    [_plane] call FUNC(setMfdLoadout);
+};
+
+if (ACE_player in _plane) then {
+    [_plane] call FUNC(getIn);
 };
 
 if (hasInterface || isServer) then {
     [{
         params ["_args", "_idPFH"];
-        _args params ["_plane"];
+        _args params ["_plane", "_delta"];
         
         if (!alive _plane) exitWith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
@@ -37,20 +43,12 @@ if (hasInterface || isServer) then {
 
             // Speedbrake animations
             [_plane, _newSpeedBrake] call FUNC(animateSpeedBreak);
-        };
-    }, 0, [_plane]] call CBA_fnc_addPerFrameHandler;
 
-    [{
-        params ["_args", "_idPFH"];
-        _args params ["_plane"];
-        
-        if (!alive _plane) exitWith {
-            [_idPFH] call CBA_fnc_removePerFrameHandler;
-        };
-
-        if (local _plane) then {
             // Afterburner effects
-            [_plane] call FUNC(afterburner);
+            if (diag_tickTime > _delta) then {
+                [_plane] call FUNC(afterburner);
+                _args set [1, _delta + AFTERBURNER_DELAY];
+            };
         };
-    }, 0.03, [_plane]] call CBA_fnc_addPerFrameHandler;
+    }, 0, [_plane, diag_tickTime]] call CBA_fnc_addPerFrameHandler;
 };

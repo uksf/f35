@@ -26,4 +26,4 @@ if (!local _plane) exitWith {};
 private _id = getPlayerUID ACE_player;
 private _index = UID_ARRAY find _id;
 
-_plane setObjectTextureGlobal [NAME_SELECTION, format [QEGVAR(plane,data\name_%1_ca.paa), _index max 0]];
+_plane setObjectTextureGlobal [NAME_SELECTION, format [QPATHTOEF(plane,data\name_%1_ca.paa), _index + 1]];

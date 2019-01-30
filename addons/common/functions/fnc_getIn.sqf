@@ -15,4 +15,4 @@
 
 params ["_plane"];
 
-[] call FUNC(setNamePlate);
+[_plane] call FUNC(setNamePlate);

@@ -11,9 +11,9 @@ class CfgPatches {
         };
         author = QUOTE(UKSF);
         authors[] = { "Beswick.T" };
-        url = QUOTE(www.uk-sf.com);
+        url = URL;
         VERSION_CONFIG_COMMON;
     };
 };
 
-class CBA_Extended_EventHandlers;
+#include "CfgEventHandlers.hpp"

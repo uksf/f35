@@ -3,6 +3,8 @@
 #define MAINPREFIX u
 #define PREFIX uksf_f35
 
+#define URL QUOTE(uk-sf.co.uk)
+
 #include "\u\uksf_f35\addons\main\script_version.hpp"
 #define VERSION MAJOR.MINOR.PATCHLVL
 #define VERSION_AR MAJOR,MINOR,PATCHLVL

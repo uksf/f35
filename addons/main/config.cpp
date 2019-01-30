@@ -26,7 +26,7 @@ class CfgPatches {
             "ace_refuel"
         };
         author = QUOTE(UKSF);
-        url = QUOTE(www.uk-sf.com);
+        url = URL;
         VERSION_CONFIG;
     };
 };

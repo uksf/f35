@@ -10,7 +10,7 @@ class CfgWeapons {
         cursor = "EmptyCursor";
         cursorAim = "mg";
         cursorSize = 1;
-        magazines[] = { QGVAR(gunpod_magazine), QGVAR(gunpod_pylon) };
+        magazines[] = { QGVAR(gunpod_magazine),QGVAR(gunpod_pylon) };
         canLock = 0;
         ballisticsComputer = "4 + 8";
         missileLockCone = 20;
@@ -19,7 +19,7 @@ class CfgWeapons {
         class GunParticles {
             class Effect {
                 effectName = "MachineGun1";
-                positionName = "muzzle";
+                positionName = "muzzle_start";
                 directionName = "muzzle_dir";
             };
         };

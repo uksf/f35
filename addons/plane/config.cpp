@@ -5,7 +5,9 @@ class CfgPatches {
         name = COMPONENT_NAME;
         units[] = {
             QGVAR(raf),
-            QGVAR(usmc)
+            QGVAR(raf_stealth),
+            QGVAR(usmc),
+            QGVAR(usmc_stealth)
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -14,7 +16,7 @@ class CfgPatches {
         };
         author = QUOTE(UKSF);
         authors[] = { "Beswick.T" };
-        url = QUOTE(www.uk-sf.com);
+        url = URL;
         VERSION_CONFIG;
     };
 };

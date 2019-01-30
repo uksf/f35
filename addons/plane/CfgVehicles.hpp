@@ -485,7 +485,7 @@ class CfgVehicles {
                             "B_BIM9X_RAIL",
                             "B_BIM9X_DUAL_RAIL",
                             "B_AMRAAM_D_RAIL",
-                            "B_AMRAAM_D_DUAL_RAIL",
+                            "B_AMRAAM_D_DUAL_RAIL"
                         };
                         attachment = "PylonRack_Missile_BIM9X_x1";
                         priority = 5;

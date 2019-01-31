@@ -17,9 +17,7 @@
 
 params ["_plane"];
 
-if (isServer) then {
-    [_plane] call FUNC(setMfdLoadout);
-};
+[_plane] call FUNC(setMfdLoadout);
 
 if (ACE_player in _plane) then {
     [_plane] call FUNC(getIn);

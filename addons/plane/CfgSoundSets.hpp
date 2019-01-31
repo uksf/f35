@@ -1,18 +1,9 @@
 class CfgSoundSets {
     class GVAR(sonicboom_soundset) {
         soundShaders[] = { QGVAR(SonicBoom_SoundShader) };
-        volumeFactor = 2;  // 2
-        spatial = 1;
-        loop = 0;
-        speedOfSound = 0;
-        sound3DProcessingType = "JetExt_Distant_3DProcessingType";
-    };
-    class GVAR(sonicboom_soundset_second) {
-        soundShaders[] = { QGVAR(SonicBoom_SoundShader_Second) };
         volumeFactor = 4;  // 2
         spatial = 1;
-        delay = 0.5;
-        delayRandomizer = 0.1;
+        loop = 0;
         speedOfSound = 0;
         sound3DProcessingType = "JetExt_Distant_3DProcessingType";
     };
@@ -102,12 +93,6 @@ class CfgSoundSets {
 };
 class CfgSoundShaders {
     class GVAR(SonicBoom_SoundShader) {
-        samples[] = { { "A3\Sounds_F_Jets\vehicles\air\Shared\FX_Plane_Jet_sonicboom", 1 } };
-        frequency = 1;
-        volume = 2;
-        range = 2000;
-    };
-    class GVAR(SonicBoom_SoundShader_Second) {
         samples[] = { { "A3\Sounds_F_Jets\vehicles\air\Shared\FX_Plane_Jet_sonicboom", 1 } };
         frequency = 1;
         volume = 2;

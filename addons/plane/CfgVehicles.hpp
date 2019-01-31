@@ -319,7 +319,7 @@ class CfgVehicles {
             EjectionSeatForce = 50;
             CanopyForce = 30;
         };
-        soundSetSonicBoom[] = { QGVAR(sonicboom_soundset),QGVAR(sonicboom_soundset_second) };
+        soundSetSonicBoom[] = { QGVAR(sonicboom_soundset) };
         class Sounds {
             soundSets[] = {
                 QGVAR(enginelowext_soundset),

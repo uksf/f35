@@ -646,6 +646,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         faction = "CUP_B_GB";
+        editorPreview = QPATHTOEF(common,data\uksf_f35_plane_raf.jpg);
         hiddenSelectionsTextures[] = {
             QPATHTOF(data\exterior_1_co.paa),
             QPATHTOF(data\name_0_ca.paa)
@@ -653,6 +654,7 @@ class CfgVehicles {
     };
     class GVAR(raf_stealth) : GVAR(raf) {
         displayName = "F-35B Lightning II (Stealth)";
+        editorPreview = QPATHTOEF(common,data\uksf_f35_plane_raf_stealth.jpg);
         radarTargetSize = 0.15;
         visualTargetSize = 0.5;
         class AnimationSources : AnimationSources {
@@ -693,6 +695,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         faction = "CUP_B_USMC";
+        editorPreview = QPATHTOEF(common,data\uksf_f35_plane_usmc.jpg);
         hiddenSelectionsTextures[] = {
             QPATHTOF(data\exterior_1_usmc_co.paa),
             QPATHTOF(data\name_0_ca.paa)
@@ -700,6 +703,7 @@ class CfgVehicles {
     };
     class GVAR(usmc_stealth) : GVAR(usmc) {
         displayName = "F-35B Lightning II (Stealth)";
+        editorPreview = QPATHTOEF(common,data\uksf_f35_plane_usmc_stealth.jpg);
         radarTargetSize = 0.15;
         visualTargetSize = 0.5;
         class AnimationSources : AnimationSources {

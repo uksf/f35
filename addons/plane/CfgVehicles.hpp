@@ -86,7 +86,7 @@ class CfgVehicles {
         airBrakeFrictionCoef = 3;
         brakeDistance = 40;
         driveOnComponent[] = {};
-        wheelSteeringSensitivity = 1.2;
+        wheelSteeringSensitivity = 2.5;
         waterLeakiness = 2.5;
         memoryPointDriverOptics = "flir_pos";
         minFireTime = 30;

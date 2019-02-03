@@ -20,10 +20,10 @@
 #define THROTTLE_ENGAGE 0.9
 #define THROTTLE_MULTIPLIER 10
 #define SPEED_MAX 1930
-#define SPEED_MIN 1400
+#define SPEED_MIN 1200
 #define SPEED_MAXMINDIFF 530
-#define FORCE 1000
-#define FUEL_USAGE 0.005
+#define FORCE 900
+#define FUEL_USAGE 0.01
 
 params ["_plane"];
 

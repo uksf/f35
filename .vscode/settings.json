@@ -36,7 +36,8 @@
         "ios": "cpp",
         "future": "cpp",
         "system_error": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "xiosbase": "cpp"
     },
     "[cpp]": {
         "editor.quickSuggestions": false

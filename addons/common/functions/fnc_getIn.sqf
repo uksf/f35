@@ -15,4 +15,5 @@
 
 params ["_plane"];
 
-[_plane] call FUNC(setNamePlate);
+[{_this call FUNC(setNamePlate)}, _this] call CBA_fnc_execNextFrame;
+

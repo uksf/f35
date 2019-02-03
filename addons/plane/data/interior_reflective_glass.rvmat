@@ -1,18 +1,13 @@
 class StageTI
 {
-	texture="u\uksf_f35\addons\plane\data\interior_reflective_glass_ca.paa";
+	texture="a3\data_f\default_glass_ti_ca.paa";
 };
-surfaceInfo="A3\data_f\penetration\glass.bisurf";
-ambient[]={1.0,1.0,1.0,1};
-diffuse[]={1.0,1.0,1.0,1};
+ambient[]={1,1,1,1};
+diffuse[]={1,1,1,1};
 forcedDiffuse[]={0,0,0,1};
 emmisive[]={0,0,0,1};
-specular[]={0.05,0.05,0.05,0};
-specularPower=150;
-renderFlags[]=
-{
-	"NoAlphaWrite"
-};
+specular[]={1,1,1,1};
+specularPower=500;
 PixelShaderID="Super";
 VertexShaderID="Super";
 class Stage1
@@ -23,13 +18,13 @@ class Stage1
 	{
 		aside[]={1,0,0};
 		up[]={0,1,0};
-		dir[]={0,0,1};
+		dir[]={0,0,0};
 		pos[]={0,0,0};
 	};
 };
 class Stage2
 {
-	texture="#(argb,8,8,3)color(0.5,0.5,0.5,1,DT)";
+	texture="#(argb,8,8,3)color(0.5,0.5,0.5,0.5,DT)";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -65,7 +60,7 @@ class Stage4
 };
 class Stage5
 {
-	texture="#(argb,8,8,3)color(0,1,1,1,SMDI)";
+	texture="#(argb,8,8,3)color(0,0.49,1,1,SMDI)";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -77,25 +72,11 @@ class Stage5
 };
 class Stage6
 {
-	texture="#(ai,64,64,1)fresnel(2.0,0.15)";
-	uvSource="tex";
-	class uvTransform
-	{
-		aside[]={1,0,0};
-		up[]={0,1,0};
-		dir[]={0,0,0};
-		pos[]={0,0,0};
-	};
+	texture="#(ai,64,64,1)fresnelGlass(0.85)";
+	uvSource="none";
 };
 class Stage7
 {
 	texture="a3\data_f\env_land_co.paa";
-	uvSource="tex";
-	class uvTransform
-	{
-		aside[]={1,0,0};
-		up[]={0,1,0};
-		dir[]={0,0,0};
-		pos[]={0,0,0};
-	};
+	uvSource="none";
 };

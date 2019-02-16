@@ -19,10 +19,10 @@
 #define HIT_ENGINE "HitEngine"
 #define THROTTLE_ENGAGE 0.9
 #define THROTTLE_MULTIPLIER 10
-#define SPEED_MAX 1930
-#define SPEED_MIN 1200
-#define SPEED_MAXMINDIFF 530
-#define FORCE 900
+#define SPEED_UPPER_MIN 1200
+#define SPEED_UPPER_OFFSET 530
+#define SPEED_LOWER_OFFSET 300
+#define FORCE 600
 #define FUEL_USAGE 0.01
 
 params ["_plane"];
@@ -39,10 +39,13 @@ if (!(_plane getVariable [QGVAR(afterburnerEngaged), false])) then {
 };
 
 private _throttleMultiplier = (_throttle - THROTTLE_ENGAGE) * THROTTLE_MULTIPLIER;
-private _speed = ((speed _plane) max 1);
+private _speed = (speed _plane) max 1;
 private _speedMultiplier = 1;
-if (_speed > SPEED_MIN) then {
-    _speedMultiplier = 1 - ((_speed - SPEED_MIN) / SPEED_MAXMINDIFF);
+if (_speed < SPEED_LOWER_OFFSET) then {
+    _speedMultiplier = (_speed / SPEED_LOWER_OFFSET) min 1;
+};    
+if (_speed > SPEED_UPPER_MIN) then {
+    _speedMultiplier = 1 - ((_speed - SPEED_UPPER_MIN) / SPEED_UPPER_OFFSET);
 };    
 
 private _forceFinal = FORCE * _throttleMultiplier * _speedMultiplier;

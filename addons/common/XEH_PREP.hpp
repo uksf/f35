@@ -1,6 +1,7 @@
 PREP(afterburner);
 PREP(animateSpeedBreak);
 PREP(animateThrustVector);
+PREP(checkPilotGroup);
 PREP(getIn);
 PREP(getOut);
 PREP(initPlane);

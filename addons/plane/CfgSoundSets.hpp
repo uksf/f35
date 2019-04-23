@@ -9,14 +9,14 @@ class CfgSoundSets {
     };
     class GVAR(enginelowext_soundset) {
         soundShaders[] = { "Plane_Fighter_04_EngineLowExt_SoundShader" };
-        volumeFactor = 1.5;  // 1
+        volumeFactor = 1;  // 1
         spatial = 1;
         loop = 1;
         sound3DProcessingType = "JetExt_Close_3DProcessingType";
     };
     class GVAR(enginehighext_soundset) {
         soundShaders[] = { "Plane_Fighter_04_EngineHighExt_SoundShader" };
-        volumeFactor = 1.65;  // 1.1
+        volumeFactor = 1.1;  // 1.1
         spatial = 1;
         loop = 1;
         sound3DProcessingType = "JetExt_Close_3DProcessingType";
@@ -25,7 +25,7 @@ class CfgSoundSets {
     };
     class GVAR(forsageext_soundset) {
         soundShaders[] = { "Plane_Fighter_04_ForsageExt_SoundShader" };
-        volumeFactor = 3;  // 1.15
+        volumeFactor = 1.5;  // 1.15
         spatial = 1;
         loop = 1;
         volumeCurve = "InverseSquare1Curve";
@@ -35,7 +35,7 @@ class CfgSoundSets {
     };
     class GVAR(forsageexthigh_soundset) {
         soundShaders[] = { QGVAR(ForsageExtHigh_SoundShader) };
-        volumeFactor = 4;  // 1.15
+        volumeFactor = 1.5;  // 1.15
         spatial = 1;
         loop = 1;
         volumeCurve = "InverseSquare1Curve";
@@ -45,14 +45,14 @@ class CfgSoundSets {
     };
     class GVAR(windnoiseext_soundset) {
         soundShaders[] = { "Plane_Fighter_04_WindNoiseExt_SoundShader" };
-        volumeFactor = 2.1;  // 1
+        volumeFactor = 1;  // 1
         spatial = 1;
         loop = 1;
         sound3DProcessingType = "JetExt_Close_3DProcessingType";
     };
     class GVAR(engineext_middle_soundset) {
         soundShaders[] = { "Plane_Fighter_04_EngineExt_Middle_SoundShader" };
-        volumeFactor = 2.1;  // 1.4
+        volumeFactor = 1.4;  // 1.4
         spatial = 1;
         loop = 1;
         shape = "FrontSemispace10";
@@ -63,7 +63,7 @@ class CfgSoundSets {
     };
     class GVAR(engineext_dist_front_soundset) {
         soundShaders[] = { "Plane_Fighter_04_EngineExt_Dist_Front_SoundShader" };
-        volumeFactor = 1.95;  // 1.3
+        volumeFactor = 1.3;  // 1.3
         spatial = 1;
         loop = 1;
         volumeCurve = "InverseSquare3Curve";
@@ -74,7 +74,7 @@ class CfgSoundSets {
     };
     class GVAR(engineext_dist_rear_soundset) {
         soundShaders[] = { "Plane_Fighter_04_EngineExt_Dist_Rear_SoundShader" };
-        volumeFactor = 2.25;  // 1.5
+        volumeFactor = 1.5;  // 1.5
         spatial = 1;
         loop = 1;
         volumeCurve = "InverseSquare1Curve";

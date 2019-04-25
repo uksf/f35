@@ -481,7 +481,8 @@ class CfgVehicles {
                 };
                 class pylons {
                     class pylons1 {
-                        // left wingtip
+                        // right 1
+                        UIposition[] = { 0.55, 0.4 };
                         maxweight = 300;
                         hardpoints[] = {
                             "B_BIM9X_RAIL",
@@ -491,24 +492,25 @@ class CfgVehicles {
                         };
                         attachment = "PylonRack_Missile_BIM9X_x1";
                         priority = 5;
-                        UIposition[] = { (0.836) / 1.5,0.3 };
                     };
                     class pylons2 : pylons1 {
-                        UIposition[] = { (0.739) / 1.5,0.25 };
+                        // right 2
+                        UIposition[] = { 0.52, 0.35 };
                         hardpoints[] = {
                             "B_BIM9X_RAIL",
                             "B_BIM9X_DUAL_RAIL",
                             "B_AMRAAM_D_RAIL",
                             "B_AMRAAM_D_DUAL_RAIL",
                             "B_GBU12_Only",
-                            "B_GBU12_DUAL_RAIL_Only"
+                            "B_GBU12_DUAL_RAIL_Only",
                         };
                         maxweight = 2500;
                         attachment = "PylonMissile_Bomb_GBU12_x1";
                         priority = 4;
                     };
                     class pylons3 : pylons2 {
-                        UIposition[] = { (0.626) / 1.5,0.2 };
+                        // right 3
+                        UIposition[] = { 0.49, 0.3 };
                         hardpoints[] = {
                             "B_BIM9X_RAIL",
                             "B_BIM9X_DUAL_RAIL",
@@ -522,8 +524,8 @@ class CfgVehicles {
                         priority = 3;
                     };
                     class pylons4 : pylons3 {
-                        //door 1 outer
-                        UIposition[] = { (0.626) / 1.5,0.4 };
+                        // bay right outer
+                        UIposition[] = { 0.45, 0.45 };
                         hardpoints[] = { "B_BIM9X", "B_AMRAAM_D_INT" };
                         maxweight = 350;
                         attachment = "PylonMissile_Missile_AMRAAM_D_INT_x1";
@@ -531,40 +533,42 @@ class CfgVehicles {
                         bay = 1;
                     };
                     class pylons5 : pylons4 {
-                        //door 1 inner
-                        UIposition[] = { (0.626) / 1.5,0.45 };
-                        hardpoints[] = { "B_GBU12_Only", "B_BIM9X", "B_AMRAAM_D_INT" };
+                        // bay right inner
+                        UIposition[] = { 0.45, 0.2 };
+                        hardpoints[] = { "B_GBU12_Only", "B_BIM9X", "B_AMRAAM_D_INT", "B_SDB_QUAD_RAIL" };
                         maxweight = 2000;
                         attachment = "PylonMissile_Bomb_GBU12_x1";
                         priority = 1;
                         bay = 1;
                     };
                     class pylons6 : pylons5 {
-                        //door 2 inner
-                        UIposition[] = { (0.374) / 1.5,0.45 };
+                        // bay left inner
+                        UIposition[] = { 0.2, 0.2 };
                         mirroredMissilePos = 5;
                     };
                     class pylons7 : pylons4 {
-                        //door 2 outer
-                        UIposition[] = { (0.374) / 1.5,0.4 };
+                        // bay left outer
+                        UIposition[] = { 0.2, 0.45 };
                         mirroredMissilePos = 4;
                     };
                     class pylons8 : pylons3 {
-                        UIposition[] = { (0.374) / 1.5,0.2 };
+                        // left 3
+                        UIposition[] = { 0.12, 0.3 };
                         mirroredMissilePos = 3;
                     };
                     class pylons9 : pylons2 {
-                        UIposition[] = { (0.261) / 1.5,0.25 };
+                        // left 2
+                        UIposition[] = { 0.09, 0.35 };
                         mirroredMissilePos = 2;
                     };
                     class pylons10 : pylons1 {
-                        // right wingtip
-                        UIposition[] = { (0.164) / 1.5,0.30 };
+                        // left 1
+                        UIposition[] = { 0.06, 0.4 };
                         mirroredMissilePos = 1;
                     };
                     class pylons11 : pylons1 {
-                        //center gunpod
-                        UIposition[] = { (0.5) / 1.5,0.35 };
+                        // centre gunpod
+                        UIposition[] = { 0.31, 0.1 };
                         hardpoints[] = { QEGVAR(weapons,gunpod) };
                         attachment = QEGVAR(weapons,gunpod_pylon);
                         maxweight = 112;

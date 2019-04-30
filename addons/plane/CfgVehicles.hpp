@@ -502,7 +502,7 @@ class CfgVehicles {
                             "B_AMRAAM_D_RAIL",
                             "B_AMRAAM_D_DUAL_RAIL",
                             "B_GBU12_Only",
-                            "B_GBU12_DUAL_RAIL_Only",
+                            "B_GBU12_DUAL_RAIL_Only"
                         };
                         maxweight = 2500;
                         attachment = "PylonMissile_Bomb_GBU12_x1";

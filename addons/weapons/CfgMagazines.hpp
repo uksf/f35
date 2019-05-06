@@ -5,10 +5,10 @@ class CfgMagazines {
         displayName = "GAU-22/A";
         displayNameShort = "GAU-22/A";
         descriptionShort = "25mm External Gun Pod\n  Capacity: 220 rounds";
-        ammo = "B_30mm_AP_Tracer_Red";
-        count = 180;
+        ammo = QGVAR(gunpod_25mm_apex);
+        count = 220;
         initSpeed = 1036;
-        tracersEvery = 3;
+        tracersEvery = 2;
         mass = 104;
         nameSound = "cannon";
     };

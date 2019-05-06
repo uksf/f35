@@ -113,7 +113,12 @@ class AirplaneHUD {
             pos0[] = { 0.5, 0.5 };
             pos10[] = { 0.71132398, 0.79310501 };
         };
-
+        class ImpactPointRelative {
+            type = "vector";
+            source = "impactpointtoviewweaponRelative";
+            pos0[] = { 0.5, 0.5 };
+            pos10[] = { 0.71132398, 0.79310501 };
+        };
         class PlaneW {
             type = "fixed";
             pos[] = { 0.5, 0.5 };
@@ -7330,7 +7335,19 @@ class AirplaneHUD {
                 };
             };
         };
-
+        class Laser {
+            condition = "laseron";
+            class LaserText {
+                type = "text";
+                source = "static";
+                text = "LASER";
+                align = "left";
+                scale = 1;
+                pos[] = { { 0.932, 0.8 }, 1 };
+                right[] = { { 0.987, 0.8 }, 1 };
+                down[] = { { 0.932, 0.845 }, 1 };
+            };
+        };
         class LittlePlane {
             type = "line";
             width = 3;
@@ -8949,6 +8966,13 @@ class AirplaneHUD {
                     { { "0.321+0.32+0.04", "0.40 - 0.28+0.27" }, 1 }
                 };
             };
+        };
+        class RadarBoxes {
+            type = "radar";
+            pos0[] = { 0.5, 0.5 };
+            pos10[] = { 0.773, 0.773 };
+            width = 4;
+            points[] = { { { -0.002, -0.002 }, 1 }, { { 0.002, -0.002 }, 1 }, { { 0.002, 0.002 }, 1 }, { { -0.002, 0.002 }, 1 }, { { -0.002, -0.002 }, 1 } };
         };
     };
     helmetMountedDisplay = 1;

@@ -34,7 +34,7 @@ class CfgWeapons {
                 soundBegin[] = { "begin1", 0.33, "begin2", 0.33, "begin3", 0.34 };
             };
             reloadTime = 0.02;
-            dispersion = 0.0036;
+            dispersion = 0.008;
             soundContinuous = 0;
             soundBurst = 0;
             showToPlayer = 1;

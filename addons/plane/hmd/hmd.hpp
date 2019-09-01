@@ -1,5 +1,5 @@
 class AirplaneHUD {
-    enableParallax = 1;
+    enableParallax = 0;
     class Pos10Vector {
         type = "vector";
         pos0[] = { 0.5, 0.5 };
@@ -8968,7 +8968,7 @@ class AirplaneHUD {
             };
         };
         class RadarBoxes {
-            type = "radar";
+            type = "radartoview";
             pos0[] = { 0.5, 0.5 };
             pos10[] = { 0.773, 0.773 };
             width = 4;

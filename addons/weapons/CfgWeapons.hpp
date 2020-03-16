@@ -28,9 +28,9 @@ class CfgWeapons {
             autoFire = 1;
             sounds[] = { "StandardSound" };
             class StandardSound {
-                begin1[] = { "\A3\Sounds_F_Jets\weapons\cannons\Fighter_Gun_30mm_AA_1", 2, 1, 3000 };
-                begin2[] = { "\A3\Sounds_F_Jets\weapons\cannons\Fighter_Gun_30mm_AA_2", 2, 1, 3000 };
-                begin3[] = { "\A3\Sounds_F_Jets\weapons\cannons\Fighter_Gun_30mm_AA_3", 2, 1, 3000 };
+                begin1[] = { "\A3\Sounds_F_Jets\weapons\cannons\Fighter_Gun_30mm_1", 2, 1, 3000 };
+                begin2[] = { "\A3\Sounds_F_Jets\weapons\cannons\Fighter_Gun_30mm_2", 2, 1, 3000 };
+                begin3[] = { "\A3\Sounds_F_Jets\weapons\cannons\Fighter_Gun_30mm_3", 2, 1, 3000 };
                 soundBegin[] = { "begin1", 0.33, "begin2", 0.33, "begin3", 0.34 };
             };
             reloadTime = 0.02;

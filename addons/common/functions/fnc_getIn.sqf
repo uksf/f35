@@ -28,7 +28,7 @@ GVAR(pilotGroupPFH) = [{
 
     if (vehicle ACE_player != _plane) exitWith {};
 
-    if ((getPosATL _plane)#2 < 20) then {
+    if ((getPosVisual _plane)#2 < 20) then {
         if (GVAR(inGroup)) then {
             GVAR(group) = group ACE_player;
             GVAR(inGroup) = false;

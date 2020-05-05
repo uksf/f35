@@ -17,7 +17,7 @@
 #define AMMRAM ["PylonRack_Missile_AMRAAM_D_x1", "PylonRack_Missile_AMRAAM_D_x2", "PylonMissile_Missile_AMRAAM_D_INT_x1"]
 #define GBU ["PylonMissile_Bomb_GBU12_x1", "PylonRack_Bomb_GBU12_x2"]
 #define JDAM []
-#define SDB []
+#define SDB ["PylonRack_Bomb_SDB_x4"]
 #define HEAVY []
 
 params ["_plane"];

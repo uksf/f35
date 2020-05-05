@@ -60,7 +60,7 @@ class CfgVehicles {
         VTOLRollInfluence = 8;
         VTOLYawInfluence = 8;
         rudderInfluence = 0.1;
-        draconicForceXCoef = 8.2;
+        draconicForceXCoef = 10;
         draconicForceYCoef = 2;
         draconicForceZCoef = 1;
         aileronControlsSensitivityCoef = 4;
@@ -477,9 +477,25 @@ class CfgVehicles {
             class TransportPylonsComponent {
                 UIPicture = QPATHTOF(data\ui\loadout.paa);
                 class presets {
-                    class empty {
+                    class Empty {
                         displayName = "Empty";
-                        attachment[] = { "", "", "", "", "", "", "", "", "", "", "" };
+                        attachment[] = {"", "", "", "", "", "", "", "", "", "", ""};
+                    };
+                    class Default {
+                        displayName = "Multi-Role";
+                        attachment[] = { "PylonRack_Missile_BIM9X_x1", "PylonRack_Missile_AMRAAM_D_x2", "PylonRack_Bomb_GBU12_x2", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonRack_Bomb_SDB_x4", "PylonRack_Bomb_SDB_x4", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonRack_Bomb_GBU12_x2", "PylonRack_Missile_AMRAAM_D_x2", "PylonRack_Missile_BIM9X_x1", QEGVAR(weapons,gunpod_pylon) };
+                    };
+                    class CAS {
+                        displayName = "CAS";
+                        attachment[] = { "PylonRack_Missile_BIM9X_x1", "PylonRack_Bomb_GBU12_x2", "PylonRack_Bomb_GBU12_x2", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonRack_Bomb_SDB_x4", "PylonRack_Bomb_SDB_x4", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonRack_Bomb_GBU12_x2", "PylonRack_Bomb_GBU12_x2", "PylonRack_Missile_BIM9X_x1", QEGVAR(weapons,gunpod_pylon) };
+                    };
+                    class CAS_Heavy {
+                        displayName = "CAS (Heavy)";
+                        attachment[] = { "PylonRack_Missile_BIM9X_x1", "PylonRack_Bomb_GBU12_x2", "PylonRack_Bomb_GBU12_x2", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonMissile_Bomb_GBU12_x1", "PylonMissile_Bomb_GBU12_x1", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonRack_Bomb_GBU12_x2", "PylonRack_Bomb_GBU12_x2", "PylonRack_Missile_BIM9X_x1", QEGVAR(weapons,gunpod_pylon) };
+                    };
+                    class CAP {
+                        displayName = "CAP";
+                        attachment[] = { "PylonRack_Missile_BIM9X_x2", "PylonRack_Missile_BIM9X_x2", "PylonRack_Missile_AMRAAM_D_x2", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonRack_Missile_AMRAAM_D_x2", "PylonRack_Missile_BIM9X_x2", "PylonRack_Missile_BIM9X_x2", QEGVAR(weapons,gunpod_pylon) };
                     };
                 };
                 class pylons {
@@ -529,7 +545,7 @@ class CfgVehicles {
                     class pylons4 : pylons3 {
                         // bay right outer
                         UIposition[] = { 0.45, 0.45 };
-                        hardpoints[] = { "B_BIM9X", "B_AMRAAM_D_INT" };
+                        hardpoints[] = { "B_AMRAAM_D_INT" };
                         maxweight = 350;
                         attachment = "PylonMissile_Missile_AMRAAM_D_INT_x1";
                         priority = 2;
@@ -538,7 +554,7 @@ class CfgVehicles {
                     class pylons5 : pylons4 {
                         // bay right inner
                         UIposition[] = { 0.45, 0.2 };
-                        hardpoints[] = { "B_GBU12_Only", "B_BIM9X", "B_AMRAAM_D_INT", "B_SDB_QUAD_RAIL" };
+                        hardpoints[] = { "B_GBU12_Only", "B_AMRAAM_D_INT", "B_SDB_QUAD_RAIL" };
                         maxweight = 2000;
                         attachment = "PylonMissile_Bomb_GBU12_x1";
                         priority = 1;
@@ -1031,8 +1047,24 @@ class CfgVehicles {
         };
         class Components : Components {
             class TransportPylonsComponent : TransportPylonsComponent {
-                // class presets {
-                // };
+                class presets {
+                    class Empty {
+                        displayName = "Empty";
+                        attachment[] = {"", "", "", "", "", "", ""};
+                    };
+                    class Default {
+                        displayName = "Multi-Role";
+                        attachment[] = { "", "", "", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonMissile_Bomb_GBU12_x1", "PylonRack_Bomb_SDB_x4", "PylonMissile_Missile_AMRAAM_D_INT_x1" };
+                    };
+                    class CAS_Heavy {
+                        displayName = "CAS";
+                        attachment[] = { "", "", "", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonMissile_Bomb_GBU12_x1", "PylonMissile_Bomb_GBU12_x1", "PylonMissile_Missile_AMRAAM_D_INT_x1" };
+                    };
+                    class CAP {
+                        displayName = "CAP";
+                        attachment[] = { "", "", "", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonMissile_Missile_AMRAAM_D_INT_x1" };
+                    };
+                };
                 class pylons : pylons {
                     class pylons1 {
                         attachment = "";
@@ -1080,8 +1112,24 @@ class CfgVehicles {
         };
         class Components : Components {
             class TransportPylonsComponent : TransportPylonsComponent {
-                // class presets {
-                // };
+                class presets {
+                    class Empty {
+                        displayName = "Empty";
+                        attachment[] = {"", "", "", "", "", "", ""};
+                    };
+                    class Default {
+                        displayName = "Multi-Role";
+                        attachment[] = { "", "", "", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonMissile_Bomb_GBU12_x1", "PylonRack_Bomb_SDB_x4", "PylonMissile_Missile_AMRAAM_D_INT_x1" };
+                    };
+                    class CAS_Heavy {
+                        displayName = "CAS";
+                        attachment[] = { "", "", "", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonMissile_Bomb_GBU12_x1", "PylonMissile_Bomb_GBU12_x1", "PylonMissile_Missile_AMRAAM_D_INT_x1" };
+                    };
+                    class CAP {
+                        displayName = "CAP";
+                        attachment[] = { "", "", "", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonMissile_Missile_AMRAAM_D_INT_x1", "PylonMissile_Missile_AMRAAM_D_INT_x1" };
+                    };
+                };
                 class pylons : pylons {
                     class pylons1 {
                         attachment = "";

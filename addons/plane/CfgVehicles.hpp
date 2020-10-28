@@ -47,9 +47,9 @@ class CfgVehicles {
         irTargetSize = 0.5;
         showAllTargets = 2;
         countermeasureActivationRadius = 32000;
-        landingSpeed = 270;
+        landingSpeed = 230;
         stallSpeed = 1;
-        acceleration = 200;
+        acceleration = 250;
         maxSpeed = 1930;
         gearUpTime = 6;
         gearDownTime = 5;
@@ -66,11 +66,11 @@ class CfgVehicles {
         aileronControlsSensitivityCoef = 4;
         // envelope[] = { 0, 0.11, 0.43, 0.97, 1.72, 2.69, 3.87, 5.27, 6.89, 8.72, 9.7, 9.6, 9.2, 8.5, 8.2, 8 };  // f-18
         // envelope[] = { 0, 1, 1.5, 1.8, 3.8, 5.3, 5.5, 6.9, 5.2, 4.3, 5, 3.2, 0.5, 0 }; // f-35
-        envelope[] = { 0, 0.43, 0.87, 1.3, 1.72, 2.69, 3.87, 5.27, 6.89, 8.72, 9.7, 9.6, 9.2, 8.5, 8.2, 8 };
+        envelope[] = { 0.9, 1.2, 1.3, 1.5, 1.72, 2.69, 3.87, 5.27, 6.89, 8.72, 9.4, 9.2, 8.5, 8.2, 8, 7.5 };
 
         // thrustCoef[] = { 1.76, 1.69, 1.62, 1.68, 1.74, 1.81, 1.89, 1.95, 1.96, 1.96, 1.92, 1.4, 0.4, 0, 0, 0 };  // f-18
         // thrustCoef[] = { 1, 1.1, 1.3, 1.5, 1.9, 1.7, 1.4, 1.2, 1.2, 1.1, 1, 0.5, 0 }; // f-35
-        thrustCoef[] = { 1, 1, 1, 1.1, 1.2, 1.3, 1.4, 1.45, 1.5, 1.5, 1.45, 1.1, 0.4, 0, 0, 0 };
+        thrustCoef[] = { 1, 1, 1, 1.1, 1.3, 1.5, 1.7, 1.8, 1.9, 1.8, 1.7, 1.6, 1, 0.4, 0, 0 };
 
         // elevatorCoef[] = { 0.3, 0.5, 0.66, 0.52, 0.49, 0.46, 0.43, 0.4, 0.35, 0.3, 0.25, 0.18, 0.17, 0.16, 0.15, 0.15 };  // f-18
         // elevatorCoef[] = { 0.6, 0.9, 1.0, 1.1, 1.0, 0.8, 0.5 }; // f-35
@@ -83,6 +83,9 @@ class CfgVehicles {
         // rudderCoef[] = { 0.5, 1.8, 2.6, 2.75, 2.8, 2.85, 2.9, 2.95, 2.98, 3.01, 2.7, 1.1, 0.9, 0.7, 0.5, 0.3 };  // f-18
         // rudderCoef[] = { 0.7, 1.5, 4, 3, 2, 1, 0.6 }; // f-35
         rudderCoef[] = { 0.5, 1.8, 2.6, 2.75, 2.8, 2.85, 2.9, 2.95, 2.98, 3.01, 2.7, 1.1, 0.9, 0.7, 0.5, 0.3 };
+        airFrictionCoefs0[] = {0, 0, 0};
+        airFrictionCoefs1[] = {0.1, 0.05, 0.006};
+        airFrictionCoefs2[] = {0.001, 0.0005, 6e-005};
         angleOfIndicence = "rad 1";
         landingAoa = "rad 10";
         flapsFrictionCoef = 0.4;
@@ -102,6 +105,12 @@ class CfgVehicles {
         memoryPointCMDir[] = { "FlareLauncher_1_dir" };
         memoryPointLDust = "WheelDust_left_pos";
         memoryPointRDust = "WheelDust_right_pos";
+        class CamShake {
+            power = 30;
+            frequency = 20;
+            distance = 50;
+            minSpeed = 1000;
+        };
         class AnimationSources {
             class animationsource_thrustVector {
                 source = "user";

@@ -19,11 +19,11 @@
 #define HIT_ENGINE "HitEngine"
 #define THROTTLE_ENGAGE 0.9
 #define THROTTLE_MULTIPLIER 10
-#define SPEED_UPPER_MIN 1200
-#define SPEED_UPPER_OFFSET 530
-#define SPEED_LOWER_OFFSET 300
+#define SPEED_UPPER_MIN 1500
+#define SPEED_UPPER_OFFSET 800
+#define SPEED_LOWER_OFFSET 150
 #define FORCE 600
-#define FUEL_USAGE 0.025
+#define FUEL_USAGE 0.0002
 
 params ["_plane"];
 
@@ -36,6 +36,7 @@ if (!isEngineOn _plane || {_throttle < THROTTLE_ENGAGE} || {_plane getHitPointDa
 };
 if (!(_plane getVariable [QGVAR(afterburnerEngaged), false])) then {
     _plane setVariable [QGVAR(afterburnerEngaged), true, true];
+    GVAR(afterburnerTick) = time + 1;
 };
 
 private _throttleMultiplier = (_throttle - THROTTLE_ENGAGE) * THROTTLE_MULTIPLIER;
@@ -51,10 +52,10 @@ if (_speed > SPEED_UPPER_MIN) then {
 private _forceFinal = FORCE * _throttleMultiplier * _speedMultiplier;
 _plane addForce [_plane vectorModelToWorld [0, abs _forceFinal, 0], getCenterOfMass _plane];
 
-GVAR(afterburnerTick) = GVAR(afterburnerTick) + 1;
-if (GVAR(afterburnerTick) == 30) then {
-    GVAR(afterburnerTick) = 0;
-    _plane setFuel (fuel _plane - (FUEL_USAGE + (FUEL_USAGE * _throttleMultiplier)));
+if (time > GVAR(afterburnerTick)) then {
+    GVAR(afterburnerTick) = time + 1;
+    private _fuelUsage = linearConversion [THROTTLE_ENGAGE, 1, _throttle, 0.00005, FUEL_USAGE];
+    _plane setFuel (fuel _plane - _fuelUsage);
 };
 
 _plane animateSource [ANIMATION_HIDE, 1, true];

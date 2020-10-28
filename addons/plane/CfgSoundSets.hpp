@@ -24,7 +24,7 @@ class CfgSoundSets {
         obstructionFactor = 0.35;
     };
     class GVAR(forsageext_soundset) {
-        soundShaders[] = { "Plane_Fighter_04_ForsageExt_SoundShader" };
+        soundShaders[] = { QGVAR(ForsageExt_SoundShader) };
         volumeFactor = 1.5;  // 1.15
         spatial = 1;
         loop = 1;
@@ -96,14 +96,21 @@ class CfgSoundShaders {
         samples[] = { { "A3\Sounds_F_Jets\vehicles\air\Shared\FX_Plane_Jet_sonicboom", 1 } };
         frequency = 1;
         volume = 2;
-        range = 2000;
+        range = 7500;
+    };
+    class GVAR(ForsageExt_SoundShader) {
+        samples[] = { { "A3\Sounds_F_Jets\vehicles\air\Plane_Fighter_04\I_Plane_Fighter_04_engine_high_ext", 1 } };
+        frequency = "1.0 min (rpm + 0.5) * (rpm factor [0.5, 1.1])";
+        volume = "0.6 * machcone * engineOn * camPos * (rpm factor [0, 1]) * (thrust factor [0, 0.9])";
+        range = 4000;
+        rangeCurve[] = { { 0, 1 }, { 1000, 0.75 }, { 2500, 0.25 }, { 4000, 0 } };
     };
     class GVAR(ForsageExtHigh_SoundShader) {
         samples[] = { { "A3\Sounds_F_Jets\vehicles\air\Plane_Fighter_04\I_Plane_Fighter_04_engine_forsage_ext", 1 } };
         frequency = 0.5;
         volume = "1.15 * machcone * engineOn * camPos * (thrust factor [0.9, 1.0])";
-        range = 2000;
-        rangeCurve[] = { { 0, 1 }, { 500, 0.75 }, { 1500, 0.25 }, { 2000, 0 } };
+        range = 5000;
+        rangeCurve[] = { { 0, 1 }, { 1000, 0.75 }, { 3000, 0.25 }, { 5000, 0 } };
     };
     class GVAR(ForsageIntHigh_SoundShader) {
         samples[] = { { "A3\Sounds_F_Jets\vehicles\air\Plane_Fighter_04\I_Plane_Fighter_04_engine_forsage_int", 1 } };

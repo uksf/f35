@@ -1,5 +1,9 @@
 class AirplaneHUD {
-    enableParallax = 0;
+    enableParallax = 1;
+    helmetMountedDisplay = 1;
+    helmetPosition[] = { -0.04, 0.03, 0.1 };
+    helmetRight[] = { 0.08, 0, 0 };
+    helmetDown[] = { 0, -0.06, 0 };
     class Pos10Vector {
         type = "vector";
         pos0[] = { 0.5, 0.5 };
@@ -7064,7 +7068,7 @@ class AirplaneHUD {
                     type = "text";
                     source = "gmeterGrav";
                     sourceScale = 0.1;
-                    sourceprecision = 2;
+                    sourceprecision = 1;
                     align = "right";
                     scale = 1;
                     pos[] = {
@@ -8975,8 +8979,4 @@ class AirplaneHUD {
             points[] = { { { -0.002, -0.002 }, 1 }, { { 0.002, -0.002 }, 1 }, { { 0.002, 0.002 }, 1 }, { { -0.002, 0.002 }, 1 }, { { -0.002, -0.002 }, 1 } };
         };
     };
-    helmetMountedDisplay = 1;
-    helmetPosition[] = { -0.039999999, 0.029999999, 0.1 };
-    helmetRight[] = { 0.079999998, 0, 0 };
-    helmetDown[] = { 0, -0.059999999, 0 };
 };

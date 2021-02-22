@@ -7,7 +7,7 @@ class CfgAmmo {
         typicalSpeed = 970;
         hit = 90;
         indirectHit = 15;
-        indirectHitRange = 1.8;
+        indirectHitRange = 2;
         explosive = 0.5;
         model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
         tracerEndTime = 30;

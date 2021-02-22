@@ -32,9 +32,10 @@ class CfgWeapons {
                 begin2[] = { "\A3\Sounds_F_Jets\weapons\cannons\Fighter_Gun_30mm_2", 2, 1, 3000 };
                 begin3[] = { "\A3\Sounds_F_Jets\weapons\cannons\Fighter_Gun_30mm_3", 2, 1, 3000 };
                 soundBegin[] = { "begin1", 0.33, "begin2", 0.33, "begin3", 0.34 };
+                soundsetshot[] = { "DS_AA_Closure_SoundSet", "DS_AA_Shot_SoundSet", "DS_autocannon_Tail_SoundSet" };
             };
             reloadTime = 0.02;
-            dispersion = 0.008;
+            dispersion = 0.006;
             soundContinuous = 0;
             soundBurst = 0;
             showToPlayer = 1;

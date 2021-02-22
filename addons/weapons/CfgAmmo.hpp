@@ -5,11 +5,18 @@ class CfgAmmo {
         ace_rearm_caliber = 25;
         caliber = 7;
         typicalSpeed = 970;
-        hit = 80;
-        indirectHit = 10;
-        indirectHitRange = 1.5;
+        hit = 90;
+        indirectHit = 15;
+        indirectHitRange = 1.8;
+        explosive = 0.5;
         model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
-        tracerEndTime = 3;
+        tracerEndTime = 30;
+        soundHit1[] = { "A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01", 3.16228, 1, 1300 };
+        soundHit2[] = { "A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02", 3.16228, 1, 1300 };
+        soundHit3[] = { "A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03", 3.16228, 1, 1300 };
+        soundHit4[] = { "A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04", 3.16228, 1, 1300 };
+        multiSoundHit[] = { "soundHit1", 0.25, "soundHit2", 0.25, "soundHit3", 0.25, "soundHit4", 0.25 };
+        SoundSetExplosion[] = { "DS_Ex_Gau8_SoundSet" };
         class CamShakeExplode {
             power = 6;
             duration = 1;

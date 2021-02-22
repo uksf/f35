@@ -8,7 +8,7 @@ class CfgMagazines {
         ammo = QGVAR(gunpod_25mm_apex);
         count = 220;
         initSpeed = 1036;
-        tracersEvery = 2;
+        tracersEvery = 1;
         mass = 104;
         nameSound = "cannon";
     };
